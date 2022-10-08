@@ -11,25 +11,24 @@ test('Тест вывода ошибки при попытке повторно 
   expect(() => {
     const team = new Team();
     const obj = {
-      name: 'Ivan'
+      name: 'Ivan',
     };
 
     team.add(obj);
-    team.add(obj)
+    team.add(obj);
   }).toThrow();
 });
-
 
 test('Тест добавления массива в set', () => {
   const team = new Team();
   const obj1 = {
-    name: 'Ivan'
+    name: 'Ivan',
   };
   const obj2 = {
-    name: 'Alex'
+    name: 'Alex',
   };
   team.addAll(obj1, obj2);
   const result = team.toArray();
 
-  expect(result).toEqual([{name: 'Ivan'}, {name: 'Alex'}]);
-})
+  expect(result).toEqual([{ name: 'Ivan' }, { name: 'Alex' }]);
+});

@@ -15,7 +15,7 @@ export default class Team {
     for (const elem of item) {
       this.members.add(elem);
     }
-  } 
+  }
 
   toArray() {
     return Array.from(this.members);
